@@ -9,7 +9,7 @@ longitude_list=[]
 latitude_list=[]
 name_list = []
 location_list = []
-list_all_events = []
+list_all_events = [['Lat', 'Long', 'Name']]
 
 length = len(data)
 for i in range(length):
@@ -18,7 +18,7 @@ for i in range(length):
 	latitude = data[i]['lat']
 	location = data[i]["location"]
 
-	list_location_event = [float(longitude),float(latitude),name]
+	list_location_event = [float(latitude),float(longitude),name]
 	list_all_events.append(list_location_event)
 	list_as_json = json.dumps(list_all_events)
 	#name_list.append(name)
